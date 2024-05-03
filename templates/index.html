@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Consumption Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Garamond&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            background-color: #262626;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #f0f0f0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 1s ease;
+        }
+        h1 {
+            text-align: center;
+            color: #262626;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        label {
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        input[type="date"], input[type="time"], input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    font-size: 16px;
+    color: #333;
+}
+	input[type="date"]:focus, input[type="time"]:focus, input[type="number"]:focus {
+    border-color: #70a1ff;
+    outline: none;
+}
+        input[type="number"]:focus {
+            border-color: #70a1ff;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #1e88e5;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0d47a1;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Electricity Consumption Prediction</h1>
+        <form action="result">
+            <label for="sub_metering_1">Sub Metering 1:</label>
+            <input type="number" name="sub_metering_1" id="sub_metering_1" required><br>
+            <label for="sub_metering_2">Sub Metering 2:</label>
+            <input type="number" name="sub_metering_2" id="sub_metering_2" required><br>
+            <label for="sub_metering_3">Sub Metering 3:</label>
+            <input type="number" name="sub_metering_3" id="sub_metering_3" required><br>
+            <label for="day">Date:</label>
+            <input type="date" name="date" id="date" required><br>
+            <!--<label for="month">Month:</label>
+            <input type="month" name="month" id="month" required><br>-->
+            <label for="time">Time:</label>
+            <input type="time" name="time" id="time" required><br>
+            <!--
+            <label for="hour">Hour:</label>
+            <input type="number" name="hour" id="hour" required><br>
+            <label for="minute">Minute:</label>
+            <input type="number" name="minute" id="minute" required><br>-->
+            <input type="submit">
+        </form>
+    </div>
+</body>
+<script>
+//document.querySelector('form').addEventListener('submit', function(event) {
+  //    event.preventDefault(); // Prevent the form from submitting normally
+   //   const timeInput = document.getElementById('time').value;
+    //const dateInput = document.getElementById('date').value;
+    //const dateObject = new Date(dateInput);
+    //const day = dateObject.getDate(); // Extract the day
+    //const month = dateObject.getMonth() + 1; // Extract the month (getMonth returns 0-11, so add 1)
+
+    // You can now use these values to send to the server, display on the page, etc.
+   //console.log(timeInput);
+
+    // Optionally, you could manually set hidden fields to pass day and month separately or modify the form data before sending
+//});
+
+</script>
+</html>
